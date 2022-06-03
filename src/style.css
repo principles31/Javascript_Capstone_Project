@@ -68,6 +68,12 @@ footer {
   z-index: 2;
 }
 
+.main-page {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  padding: 72px;
+}
 
 .movie-content {
   display: flex;
@@ -159,10 +165,23 @@ footer {
   .main-page {
     padding: 30px;
   }
+
+  .movies-display {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
 }
 
 @media (min-width: 601px)  and (max-width: 920px) {
   .main-page {
     padding: 30px;
   }
+
+  .movies-display {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
 }
+
