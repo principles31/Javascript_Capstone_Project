@@ -1,4 +1,4 @@
-export const commentApi = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/atLoWEfmgzw7LGfVLApZ/comments';
+export const commentApi = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/gNqJlH4NUmwrTShKqyf3/comments';
 export const movieApi = 'https://api.tvmaze.com/shows';
 
 const fetchAllMovieComments = async (movieId) => {
