@@ -6,7 +6,6 @@ import getData from './modules/getdata.js';
 import commentsListner from './modules/commentsPopUp.js';
 import './modules/moviesCount.js';
 
- 
 document.addEventListener('DOMContentLoaded', showMovies);
 
 const displayItem = async () => {
