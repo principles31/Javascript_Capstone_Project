@@ -1,4 +1,4 @@
-import { getLikes } from './Involvement.js';
+//import { getLikes } from './Involvement.js';
 
 const main = document.querySelector('.main-page');
 
