@@ -1,5 +1,3 @@
-//import { getLikes } from './Involvement.js';
-
 const main = document.querySelector('.main-page');
 
 const showMovies = async (data) => {
@@ -37,25 +35,9 @@ const showMovies = async (data) => {
     commentBtn.setAttribute('movie-Id', `${data[i].id}`);
     commentBtn.id = `${data[i].id}`;
     commentBtn.textContent = 'Comments';
-   
     movieDescript.append(commentBtn);
     movieDisplay.append(Img, movieDescript);
     main.appendChild(movieDisplay);
-
-    const updateLikes = async () => {
-      const response = await getLikes();
-      const counts = document.querySelectorAll('.rateCounts');
-
-      counts.forEach((button) => {
-        response.forEach((res) => {
-          if (button.id === res.item_id) {
-            button.textContent = res.likes;
-          }
-        });
-      });
-      stats.append(likeCount);
-    };
-    updateLikes();
   }
 };
 export default showMovies;

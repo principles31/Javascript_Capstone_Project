@@ -159,7 +159,6 @@ footer {
   cursor: pointer;
 }
 
-
 /* media querries */
 @media (max-width: 600px) {
   .main-page {
@@ -184,4 +183,3 @@ footer {
     gap: 20px;
   }
 }
-
