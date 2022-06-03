@@ -55,7 +55,7 @@ const displayComments = (movieId) => {
   });
 };
 const closePopUp = () => {
-  document.querySelector("#close-popup").addEventListener('click', () => {
+  document.querySelector('#close-popup').addEventListener('click', () => {
     commentPopUp.style.display = 'none';
     commentPopUp.innerHTML = '';
     document.body.style.overflow = 'visible';
