@@ -2,9 +2,9 @@ import updateTotalNumberOfComments, {
   fetchAllMovieComments,
   commentApi,
   movieApi,
-} from "./commentsItemDetail.js";
+} from './commentsItemDetail.js';
 
-const commentPopUp = document.querySelector(".movie-popup");
+const commentPopUp = document.querySelector('.movie-popup');
 
 const getTvInfo = async (tvUrl) => {
   try {
@@ -12,15 +12,15 @@ const getTvInfo = async (tvUrl) => {
     const answer = response.json();
     return answer;
   } catch (error) {
-    throw new Error("Request failed: ", error);
+    throw new Error('Request failed: ', error);
   }
 };
 
 const comment = async (tvUrl, formData = {}) => {
   const answer = await fetch(tvUrl, {
-    method: "POST",
+    method: 'POST',
     headers: {
-      "Content-Type": "application/json",
+      'Content-Type': 'application/json',
     },
     body: JSON.stringify(formData),
   });
@@ -37,28 +37,28 @@ const tvInfo = async (movieId) => {
   return response;
 };
 const renderComments = (comment) => {
-  commentPopUp.querySelector(".list-of-comments").innerHTML = comment;
+  commentPopUp.querySelector('.list-of-comments').innerHTML = comment;
 };
 
 const displayComments = (movieId) => {
   fetchAllMovieComments(movieId).then((data) => {
     if (!data.error) {
-      let comments = "";
+      let comments = '';
       data.forEach((comment) => {
         comments += `<span class="comment-date-username">${comment.username}</span><small>${comment.creation_date}</small>
                     <p class="comment-body">${comment.comment} </p>`;
       });
       renderComments(comments);
     } else {
-      renderComments("No Comments To show!!!");
+      renderComments('No Comments To show!!!');
     }
   });
 };
 const closePopUp = () => {
-  document.querySelector("#close-popup").addEventListener("click", () => {
-    commentPopUp.style.display = "none";
-    commentPopUp.innerHTML = "";
-    document.body.style.overflow = "visible";
+  document.querySelector("#close-popup").addEventListener('click', () => {
+    commentPopUp.style.display = 'none';
+    commentPopUp.innerHTML = '';
+    document.body.style.overflow = 'visible';
   });
 };
 
@@ -95,8 +95,8 @@ const showPopUp = (movieId) => {
     displayComments(movieId);
     updateTotalNumberOfComments(movieId);
 
-    const form = commentPopUp.querySelector(".add-comment-form");
-    form.addEventListener("submit", (e) => {
+    const form = commentPopUp.querySelector('.add-comment-form');
+    form.addEventListener('submit', (e) => {
       e.preventDefault();
       const userName = form.elements.username.value;
       const comment = form.elements.comment.value;
@@ -111,17 +111,17 @@ const showPopUp = (movieId) => {
       });
     });
   });
-  commentPopUp.style.display = "block";
+  commentPopUp.style.display = 'block';
   closePopUp();
 };
 
 const commentsListner = () => {
-  const commentButton = document.querySelectorAll(".movie-comment");
+  const commentButton = document.querySelectorAll('.movie-comment');
   commentButton.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const movieId = btn.getAttribute("movie-Id");
+    btn.addEventListener('click', () => {
+      const movieId = btn.getAttribute('movie-Id');
       showPopUp(movieId);
-      document.body.style.overflow = "hidden";
+      document.body.style.overflow = 'hidden';
     });
   });
 };
