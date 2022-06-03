@@ -54,10 +54,6 @@ body {
   cursor: pointer;
 }
 
-
-
-
-
 footer {
   justify-content: space-between;
   align-items: center;
@@ -77,14 +73,10 @@ footer {
   .main-page {
     padding: 30px;
   }
-
- 
 }
 
 @media (min-width: 601px)  and (max-width: 920px) {
   .main-page {
     padding: 30px;
   }
-
-
 }
