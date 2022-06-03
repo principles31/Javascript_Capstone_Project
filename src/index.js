@@ -4,8 +4,7 @@ import './css/comment.css';
 import showMovies from './modules/showMovies.js';
 import getData from './modules/getdata.js';
 import commentsListner from './modules/commentsPopUp.js';
-
-// import listenHeartClicks from './modules/Involvement.js';
+import './modules/moviesCount.js';
 
 document.addEventListener('DOMContentLoaded', showMovies);
 
