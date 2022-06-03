@@ -56,6 +56,7 @@ npm start
  
 - GitHub: [@Nedjwab](https://github.com/nedjwab)
 - LinkedIn: [@Bouraiounedjwa](https://www.linkedin.com/feed/)
+- twitter: [@Bouraiounedjwa](https://www.linkedin.com/feed/)
 
 👤 **Emmanuel Mensah**
  
