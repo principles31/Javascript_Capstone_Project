@@ -1,7 +1,8 @@
   ![](https://img.shields.io/badge/Microverse-blueviolet) 
 
-# Film woeld 
+# Film world 
 This is a films websites where we display a list of films and series and the user can add likes and comments.
+> ![Film world](https://user-images.githubusercontent.com/90258833/176210828-ff01052e-9611-4965-9dd7-1a6f035e387b.png)
 
 ## Live Demo 
 [Here](https://principles31.github.io/Javascript_Capstone_Project/dist) you can find a live demo of the project.
